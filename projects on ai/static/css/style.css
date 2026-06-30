@@ -1,0 +1,450 @@
+/* ===========================
+   Google Font
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+body{
+    background:linear-gradient(135deg,#09090f,#111827,#1b1035);
+    color:#fff;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Logo */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.logo i{
+
+    font-size:32px;
+
+    color:#8b5cf6;
+
+    text-shadow:0 0 18px #8b5cf6;
+}
+
+.logo h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+/* Button */
+
+#newChat{
+
+    border:none;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+#newChat:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px #8b5cf6;
+}
+
+/* ===========================
+   Chat Area
+=========================== */
+
+#chatBox{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+/* Scrollbar */
+
+#chatBox::-webkit-scrollbar{
+
+    width:8px;
+}
+
+#chatBox::-webkit-scrollbar-thumb{
+
+    background:#8b5cf6;
+
+    border-radius:20px;
+}
+
+/* ===========================
+   Welcome
+=========================== */
+
+.welcome{
+
+    width:100%;
+
+    text-align:center;
+
+    margin:auto;
+}
+
+.welcome i{
+
+    font-size:90px;
+
+    color:#8b5cf6;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 25px #8b5cf6;
+}
+
+.welcome h2{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+}
+
+.welcome p{
+
+    color:#bdbdbd;
+
+    width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   Messages
+=========================== */
+
+.message{
+
+    max-width:70%;
+
+    display:flex;
+
+    gap:15px;
+
+    animation:fadeIn .35s ease;
+}
+
+/* Bot */
+
+.bot{
+
+    align-self:flex-start;
+}
+
+.bot .icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#8b5cf6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    box-shadow:0 0 20px #8b5cf6;
+}
+
+.bot .text{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    padding:18px;
+
+    border-radius:20px;
+
+    line-height:1.7;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* User */
+
+.user{
+
+    align-self:flex-end;
+}
+
+.user .text{
+
+    background:#8b5cf6;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    line-height:1.6;
+
+    box-shadow:0 0 15px rgba(139,92,246,.4);
+}
+
+/* ===========================
+   Typing
+=========================== */
+
+.typing{
+
+    display:flex;
+
+    gap:8px;
+
+    padding-left:50px;
+
+    margin-bottom:20px;
+}
+
+.typing span{
+
+    width:12px;
+
+    height:12px;
+
+    background:#8b5cf6;
+
+    border-radius:50%;
+
+    animation:typing 1s infinite;
+}
+
+.typing span:nth-child(2){
+
+    animation-delay:.2s;
+}
+
+.typing span:nth-child(3){
+
+    animation-delay:.4s;
+}
+
+.hidden{
+
+    display:none;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    padding:25px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+form{
+
+    display:flex;
+
+    gap:15px;
+}
+
+input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:18px;
+}
+
+input::placeholder{
+
+    color:#bdbdbd;
+}
+
+button[type="submit"]{
+
+    width:65px;
+
+    border:none;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+}
+
+button[type="submit"]:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 22px #8b5cf6;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+@keyframes typing{
+
+    0%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+    }
+
+    100%{
+
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+header{
+
+    padding:20px;
+}
+
+.logo h1{
+
+    font-size:24px;
+}
+
+.welcome h2{
+
+    font-size:30px;
+}
+
+.welcome p{
+
+    width:95%;
+}
+
+.message{
+
+    max-width:95%;
+}
+
+}
