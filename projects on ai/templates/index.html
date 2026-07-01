@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.jpeg') }}">  
+  <title>CrazyPT - The Crazy AI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+
+    
+</head>
+<body>
+    <script src="/static/js/theme.js"></script>
+
+    <div class="chat-layout">
+        
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-logo">
+               <img src="../static/favicon.jpeg" alt="CrazyPT Logo" class="logo-image">
+                <!-- <i class="fa-solid fa-robot text-purple" style="font-size: 28px;"></i> -->
+                <h2>CrazyPT</h2>
+            </div>
+
+            <button id="newChat" class="new-chat">
+                <i class="fa-solid fa-plus"></i> New Chat
+            </button>
+
+            <div class="sidebar-menu">
+                <h3 style="color: #888; font-size: 14px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 20px;">History</h3>
+                <div id="chatList">
+                    </div>
+            </div>
+
+            <!-- <div class="sidebar-user">
+                <div class="user-avatar">R</div>
+                <div>
+                    <h4>Rudra Deepak</h4>
+                    <p class="status"><span class="online"></span>Developer</p>
+                </div>
+            </div> -->
+                <div class="current-user">
+
+        <div class="current-avatar">
+            {{ username[0]|upper }}
+        </div>
+
+        <div>
+
+            <div class="current-name">
+                {{ username }}
+            </div>
+
+            <div class="current-email">
+                {{ email }}
+            </div>
+
+        </div>
+
+    </div>
+
+
+        </aside>
+        
+
+        <div class="chat-main">
+            
+            <header class="chat-header">
+                <div class="logo">
+                    <h2>Crazy<span>PT</span></h2>
+                </div>
+                <div class="header-actions">
+                   <button class="header-btn" onclick="window.location.href='/settings'"><i class="fa-solid fa-gear"></i>
+</button>
+                </div>
+            </header>
+
+            <main id="chatBody" class="chat-body">
+
+                <div class="welcome-card fade-in float">
+                    <i class="fa-solid fa-brain glow-text" style="font-size: 65px; color: #7C3AED; margin-bottom: 20px;"></i>
+                    <h1>Welcome to CrazyPT</h1>
+                       <h3 style="color: #8b5cf6;font-size: 30px;">By- Rudra Deepak</h3><br>
+
+                    <p>
+                        ☠️ Don't think this is your regular AI chatbot. This is a chaotic, crazy AI companion that will help you solve problems in a highly sarcastic way.<br>
+                        <strong>Smart enough to solve your problems... sarcastic enough to roast your mistakes.</strong><br><br>
+                        <span style="color: #ff5555; font-weight: bold;">⚠️ BE ALERT:</span> This interface is definitely not for the faint-hearted. Anyway, that's what makes it fun, right?
+                    </p>
+                    
+                    <div class="quick-grid">
+                        <div class="quick-card lift">
+                            <h3>💻 Fix My Code</h3>
+                            <p>"Review my messy loop architecture and roast it."</p>
+                        </div>
+                        <div class="quick-card lift">
+                            <h3>💡 Dumb Idea Check</h3>
+                            <p>"I have a business idea. Tell me why it'll fail miserably."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message bot fade-in">
+                    <div class="user-avatar (bot)">🤖</div>
+                    <div class="text bot-bubble">
+                        <p>Hey human 👀 What's today's chaos?</p>
+                    </div>
+                </div>
+
+                <div id="typing" class="loading-message" style="display:none; margin-left: 35px;"></div>
+
+            </main>
+
+            <div class="chat-input-area">
+                        <form id="chatForm" class="chat-input">
+                            <textarea 
+                                id="messageInput" 
+                                placeholder="Type something chaotic..." 
+                                rows="1"
+                            ></textarea>
+                            <div class="input-tools">
+                                <button id="sendBtn" class="send-btn" type="submit">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+               <div class="chat-footer">
+
+
+                <a href="https://linktr.ee/yi.rudra">
+    <div class="char-count">
+        Rudra's CrazyPT Framework v1.1
+         <div class="sidebar-user">
+                <!-- <div class="user-avatar">R</div> -->
+                <div>
+                    <h4>Rudra Deepak</h4>
+                    <p class="status"><span class="online"></span>Developer</p>
+                </div>
+            </div>
+    </div></a>
+    
+
+</div>
+
+
+        </div>
+        
+
+    </div>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+<script src="{{ url_for('static', filename='js/history.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
