@@ -54,18 +54,17 @@ Savage enough to roast your mistakes. Chat with AI instantly, get coding help, s
  
 
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.jpeg') }}">  
-<link rel="stylesheet" href="/static/css/style.css">
-<link rel="stylesheet" href="/static/css/main.css">
-<link rel="stylesheet" href="/static/css/landing.css">
-<link rel="stylesheet" href="/static/css/animations.css">
-<link rel="stylesheet" href="/static/css/responsive.css">
-  
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 
 </head>
 
 
 <body>
-    <script src="/static/js/theme.js"></script>
+   <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
 
     <div class="particles">
     <span></span>
