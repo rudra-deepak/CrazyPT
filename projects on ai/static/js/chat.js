@@ -16,6 +16,13 @@ menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active");
 });
 
+const chatBody = document.getElementById("chatBody");
+
+chatBody.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+});
+
+
 /*=========================================
         SCROLL
 =========================================*/
