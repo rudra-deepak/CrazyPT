@@ -9,18 +9,6 @@ const typing = document.getElementById("typing");
 
 let currentConversationId = null;
 
-const menuBtn = document.getElementById("menuBtn");
-const sidebar = document.getElementById("sidebar");
-
-menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-});
-
-const chatBody = document.getElementById("chatBody");
-
-chatBody.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-});
 
 
 /*=========================================
@@ -234,6 +222,25 @@ messageInput.addEventListener("keydown", (e) => {
 
         sendMessage();
 
+    }
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    const chatBody = document.getElementById("chatBody");
+
+    if (menuBtn && sidebar) {
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+    }
+
+    if (chatBody && sidebar) {
+        chatBody.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+        });
     }
 
 });
