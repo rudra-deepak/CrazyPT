@@ -1,0 +1,178 @@
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media screen and (max-width:900px){
+
+.chat-layout{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:280px;
+    height:100vh;
+    z-index:999;
+    overflow-y:auto;
+}
+
+.sidebar.active{
+    display:block;
+}
+
+/* Main */
+
+.chat-main{
+    width:100%;
+    margin:0;
+    height:100vh;
+}
+
+/* Header */
+
+.chat-header{
+    padding:14px 18px;
+}
+
+.chat-header h2{
+    font-size:22px;
+}
+
+/* Welcome */
+
+.welcome-card{
+    padding:25px 18px;
+    margin:15px;
+}
+
+.welcome-card h1{
+    font-size:32px;
+}
+
+.welcome-card h3{
+    font-size:22px !important;
+}
+
+.welcome-card p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* Quick cards */
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+/* Messages */
+
+.message{
+    width:100%;
+}
+
+.text{
+    max-width:85%;
+    word-break:break-word;
+}
+
+/* Input */
+
+.chat-input-area{
+    padding:10px;
+}
+
+.chat-input{
+    width:100%;
+}
+
+#messageInput{
+    font-size:16px;
+    min-height:48px;
+    max-height:140px;
+}
+
+.send-btn{
+    width:48px;
+    height:48px;
+}
+
+/* Footer */
+
+.chat-footer{
+    font-size:12px;
+    text-align:center;
+}
+
+/* Avatar */
+
+.current-user{
+    padding:15px;
+}
+
+.current-email{
+    font-size:12px;
+}
+
+/* Prevent horizontal scrolling */
+
+body,
+.chat-main,
+.chat-body{
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+}
+
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media screen and (max-width:480px){
+
+.welcome-card{
+    margin:10px;
+    padding:20px 15px;
+}
+
+.welcome-card h1{
+    font-size:28px;
+}
+
+.welcome-card h3{
+    font-size:20px !important;
+}
+
+.text{
+    max-width:92%;
+}
+
+#messageInput{
+    font-size:15px;
+}
+
+.send-btn{
+    width:44px;
+    height:44px;
+}
+
+.chat-header{
+    padding:12px;
+}
+
+}
