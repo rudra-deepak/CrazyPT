@@ -376,27 +376,59 @@ footer{
 
 /* Responsive */
 
-@media(max-width:900px){
+
+
+@media (max-width: 900px) {
+
+nav{
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+nav div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a{
+    font-size:16px;
+}
+
+.hero{
+    padding:40px 20px;
+}
+
+.hero img{
+    width:110px !important;
+    height:110px !important;
+}
 
 .hero h1{
-
-font-size:50px;
-
+    font-size:38px;
 }
 
 .hero h2{
-
-font-size:24px;
-
+    font-size:22px;
 }
 
-.stats{
-
-grid-template-columns:1fr;
-
+.hero h3{
+    font-size:24px !important;
 }
 
+.hero p{
+    font-size:16px;
+    line-height:1.6;
 }
+
+.btn{
+    width:90%;
+    max-width:300px;
+}
+
+}   
 
 /* ==========================================
         PREMIUM TESTIMONIALS
