@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+     <style>
+        body{
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+    </style>
+
+<title>About CrazyPT</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.jpeg') }}">  
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/about.css">
+<link rel="stylesheet" href="/static/css/animations.css">   
+
+</head>
+
+
+<body>
+    <script src="/static/js/theme.js"></script>
+
+
+<nav>
+    
+
+<h2>  <div style="display: inline-block; vertical-align: middle;"> 
+    <img src="{{ url_for('static', filename='favicon.jpeg') }}" alt="CrazyPT Logo" class="logo-image" style="width: 55px; height: 55px; margin-right: 10px; border-radius: 50%;"> 
+</div>CrazyPT 🤖 </h2>
+
+</nav>
+
+<!-- 
+<section class="hero">
+
+
+<h1>
+About CrazyPT
+</h1>
+
+
+<p>
+
+CrazyPT is an AI chatbot created by Rudra Deepak.
+
+<br><br>
+
+Built using:
+
+<br>
+
+Python 🐍
+<br>
+Flask
+<br>
+Gemini AI
+<br>
+HTML
+<br>
+CSS
+<br>
+JavaScript
+
+</p>
+
+
+</section>
+ -->
+
+
+ <section style="
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    font-family:'Poppins',sans-serif;
+    background:transparent;
+">
+
+    <div style="
+        max-width:700px;
+        width:100%;
+        background:rgba(255,255,255,0.08);
+        backdrop-filter:blur(12px);
+        border:1px solid rgba(255,255,255,0.15);
+        border-radius:25px;
+        padding:45px;
+        box-shadow:0 15px 35px rgba(0,0,0,0.35);
+        text-align:center;
+        color:white;
+    ">
+
+        <h1 style="
+            font-size:48px;
+            margin-bottom:20px;
+            font-weight:700;
+            background:linear-gradient(to right,#ffffff,#9a3ef6);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        ">
+           <div style="display: inline-block; vertical-align: middle;"> 
+    <img src="{{ url_for('static', filename='favicon.jpeg') }}" alt="CrazyPT Logo" class="logo-image" style="width: 70px; height: 70px; margin-right: 10px; border-radius: 50%;"> 
+</div> About CrazyPT
+        </h1>
+
+        <p style="
+            font-size:20px;
+            line-height:1.8;
+            color:#f2f2f2;
+        ">
+            <strong style="color:#ffffff;">CrazyPT</strong> is a modern AI chatbot created by
+            <span style="color:#a148ff;font-weight:bold;">Rudra Deepak</span>.
+           
+        </p>
+            <br><br>
+
+            It is designed to provide intelligent, fast, and interactive conversations using modern web technologies and Generative AI.
+            It's a crazy AI companion that will help you solve problems in a highly sarcastic way.
+        </p>
+
+        <div style="
+            margin-top:35px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:15px;
+        ">
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🐍 Python</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">⚡ Flask</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">✨ Gemini Model API</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🌐 HTML</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🎨 CSS</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🚀 JavaScript</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🍀 MongoDB</span>
+            <span style="background:#ffffff;color:#6C2BD9;padding:10px 18px;border-radius:50px;font-weight:600;">🐳 Brevo</span>
+
+
+        </div>
+
+        <p style="
+            margin-top:35px;
+            color:#d8b4fe;
+            font-size:17px;
+            font-style:italic;
+        ">
+            "Making AI simple, powerful, and accessible for everyone."
+        </p><br><br >
+         <span style="color:#ff4d8e;font-weight:bold;"> Rudra's CrazyPT Framework vl.1</span>
+
+    </div>
+
+</section>
+</body>
+
+</html>

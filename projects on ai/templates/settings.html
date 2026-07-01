@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.jpeg') }}">
+
+<title>Settings | CrazyPT</title>
+
+<link rel="stylesheet" href="/static/css/main.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.settings-box{
+
+    width:520px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+h1{
+
+    color:#c084fc;
+
+    text-align:center;
+
+    margin-bottom:8px;
+
+}
+
+.subtitle{
+
+    color:#bdbdbd;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.option{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.05);
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.option:hover{
+
+    background:rgba(139,92,246,.15);
+
+    transform:translateX(6px);
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.icon{
+
+    font-size:24px;
+
+}
+
+.title{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.value{
+
+    color:#c084fc;
+
+    font-size:15px;
+
+}
+
+.soon{
+
+    background:#8b5cf6;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+}
+
+.logout{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+}
+
+.back-btn{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#8b5cf6;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:#7c3aed;
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <script src="/static/js/theme.js"></script>
+
+<div class="settings-box">
+
+<h1>⚙ Settings</h1>
+
+<p class="subtitle">
+Manage your CrazyPT account
+</p>
+
+<div class="option">
+
+<div class="left">
+
+<div class="icon">👤</div>
+
+<div>
+
+<div class="title">Username</div>
+
+<div class="value">{{ username }}</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="option">
+
+<div class="left">
+
+<div class="icon">📧</div>
+
+<div>
+
+<div class="title">Email</div>
+
+<div class="value">{{ email }}</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="option">
+
+<div class="left">
+
+<div class="icon">🌓</div>
+
+<div class="title">Theme</div>
+
+</div>
+
+<span class="soon">Coming Soon</span>
+
+</div>
+
+<div class="option"
+onclick="if(confirm('Delete ALL chats?')) location.href='/clear_all';">
+
+<div class="left">
+
+<div class="icon">🧹</div>
+
+<div class="title">Clear All Chats</div>
+
+</div>
+
+</div>
+
+<div class="option"
+onclick="location.href='/about';">
+
+<div class="left">
+
+<div class="icon">ℹ</div>
+
+<div class="title">About CrazyPT</div>
+
+</div>
+
+</div>
+
+<div class="option logout"
+onclick="location.href='/logout';">
+
+<div class="left">
+
+<div class="icon">🚪</div>
+
+<div class="title">Logout</div>
+
+</div>
+
+</div>
+
+<a href="/chatbot" class="back-btn">
+← Back to Chat
+</a>
+
+</div>
+
+</body>
+
+</html>
